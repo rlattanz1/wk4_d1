@@ -13,13 +13,14 @@ class TicTacToeNode
   # the current move.
   def children
     child_arr = []
+    dup_board = dup
     @next_mover_mark == :X ? @next_mover_mark = :O : @next_mover_mark = :X
     (0..2).each do |r|
       (0..2).each do |c|
-        child_arr << TicTacToeNode.new(board, next_mover_mark, prev_move_pos) if board.rows[r][c].nil?
+        child_arr << dup_board if board.rows[r][c].nil?
       end
     end
-    child_arr
+    p child_arr
   end
 
   def losing_node?(evaluator)
