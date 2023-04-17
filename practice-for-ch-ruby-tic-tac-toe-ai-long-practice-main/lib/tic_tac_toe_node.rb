@@ -14,8 +14,12 @@ class TicTacToeNode
   def children
     child_arr = []
     board.open_positions.each do |pos|
-    dup_board = board.dup
-    child_arr << TicTacToeNode.new(dup_board, dup_board.next_mark, pos)
+      if board.empty?(pos)
+        dup_board = board.dup
+        mark = next_mover_mark == :x ? :o : :x
+        dup_board[pos]= mark
+        child_arr << TicTacToeNode.new(dup_board, mark, pos)
+      end
     end
     child_arr
   end
