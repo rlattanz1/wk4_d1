@@ -6,7 +6,7 @@ require 'tic_tac_toe_node'
 
 describe TicTacToeNode do
   let(:empty_board_node) do
-    TicTacToeNode.new(Board.new, :x)
+    TicTacToeNode.new(Board.new, :x) 
   end
 
   describe '#initialize' do

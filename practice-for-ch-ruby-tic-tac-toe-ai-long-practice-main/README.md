@@ -1,6 +1,6 @@
 # Tic-Tac-Toe AI
 
-You're going to write a computer AI that can't be beaten at TicTacToe. 
+You're going to write a computer AI that can't be beaten at TicTacToe.
 
 ## Learning goals
 
@@ -13,7 +13,7 @@ By the end of the practice, you should be able to
 
 To get started, download the skeleton by clicking on the `Download Project`
 button at the bottom of this page. On the ensuing GitHub page, click the green
-`<> Code` button and select `Download ZIP`.  
+`<> Code` button and select `Download ZIP`.
 
 In the skeleton is a __tic_tac_toe.rb__ file which contains an improved version
 of the TTT solution from W2D3 in the Foundations module. Today, you will be
@@ -32,7 +32,7 @@ bundle exec rspec spec/super_computer_player_spec.rb
 Of course, they should be failing right now. Call your Instructor over if you
 have problems.
 
-## Phase I: `TicTacToeNode`
+## Phase I: `TicTacToeNode` 
 
 Create a `TicTacToeNode` class. This will represent a TTT game-state: it
 will store the current state of the `board` plus the `next_mover_mark` of the
