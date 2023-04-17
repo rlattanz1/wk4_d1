@@ -9,11 +9,13 @@ class TicTacToeNode
     @prev_move_pos = prev_move_pos
   end
 
+    # This method generates an array of all moves that can be made after
+  # the current move.
   def children
     child_arr = []
-    next_mover_mark == :X ? :O : :X
+    @next_mover_mark == :X ? @next_mover_mark = :O : @next_mover_mark = :X
     board.each do |r|
-      board.each do |c|
+      r.each do |c|
         child_arr << board[r][c] if board[r][c].empty?
       end
     end
@@ -29,8 +31,8 @@ class TicTacToeNode
   def winning_node?(evaluator)
   end
 
-  # This method generates an array of all moves that can be made after
-  # the current move.
-  def children
-  end
 end
+
+k = TicTacToeNode.new(Board.new,:X)
+k.children
+
